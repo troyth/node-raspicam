@@ -1,3 +1,6 @@
+###0.0.5
+*	test logs, trying to fix duplicate child process execution
+
 ###0.0.4
 *	fixed major error, start() method now stable
 
