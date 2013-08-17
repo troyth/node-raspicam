@@ -1,3 +1,6 @@
+###0.0.7
+*	implmented killAllChildren() sub function
+
 ###0.0.6
 *	implemented stopAll() method
 
