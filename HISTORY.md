@@ -1,3 +1,6 @@
+###0.0.6
+*	implemented stopAll() method
+
 ###0.0.5
 *	test logs, trying to fix duplicate child process execution
 
