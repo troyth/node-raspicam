@@ -1,3 +1,6 @@
+###0.1.3
+*	emission test
+
 ###0.1.2
 *	made child_process an attribute of the RaspiCam object
 
