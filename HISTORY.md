@@ -1,3 +1,7 @@
+###0.1.0
+*	migrated child process method from exec to spawn
+*	only allow one capture process at a time
+
 ###0.0.7
 *	implmented killAllChildren() sub function
 
