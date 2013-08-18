@@ -1,3 +1,6 @@
+###0.1.1
+*	return child_process from start() method
+
 ###0.1.0
 *	migrated child process method from exec to spawn
 *	only allow one capture process at a time
