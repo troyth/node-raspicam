@@ -1,3 +1,6 @@
+###0.1.2
+*	made child_process an attribute of the RaspiCam object
+
 ###0.1.1
 *	return child_process from start() method
 
