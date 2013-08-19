@@ -1,3 +1,6 @@
+###0.1.5
+*	replaced this with self alias for child_process close emission
+
 ###0.1.4
 *	removed emission test
 
