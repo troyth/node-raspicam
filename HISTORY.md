@@ -1,3 +1,6 @@
+###0.1.6
+*	closed file watcher before opening a new fs.watch()
+
 ###0.1.5
 *	replaced this with self alias for child_process close emission
 
