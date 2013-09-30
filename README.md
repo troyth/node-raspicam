@@ -1,20 +1,20 @@
-#node-raspicam
+# node-raspicam
 
 A Node.js-based controller module for the Raspberry Pi camera based on a command structure similar to Johnny-Five. Currently implemented as a wrapper for structuring a command line process call using child_process.exec from within Node.
 
-##The Basics
+## The Basics
 
-###To Install
+### To Install
 
 	npm install raspicam
 
-###To Use
+### To Use
 
-Require raspicam in your node app, then used the exposed constructor to create a RaspiCam object that you can you to take photos, start a timelapse, or record video.
+Require raspicam in your node app, then used the exposed constructor to create a RaspiCam object that you can use to take photos, start a timelapse, or record video.
 
 	var RaspiCam = require("raspicam");
 
-	var camera = new RaspiCam({ opts });
+	var camera = new RaspiCam({ opts }); //the type - photo, timelapse or video - defined in opts
 
 	//to take a snapshot, start a timelapse or video recording
 	var process_id = camera.start({ opts });
@@ -23,11 +23,11 @@ Require raspicam in your node app, then used the exposed constructor to create a
 	camera.stop( process_id );
 
 
-###RaspiCam Constructor
+### RaspiCam Constructor
 
 The RaspiCam() constructor creates an object that can then be triggered to take a snapshot or start a timelapse or video recording. The constructor options mirror those offered by the raspistill and raspivideo commands provided by the Raspberry Pi Camera API.
 
-######RaspiCam Options
+#### RaspiCam Options
 
 *	`mode` (String) can be "photo", "timelapse" or "video"
 *	`freq` (Integer) sets the frequency of a timelapse in milliseconds (ie. photos will be taken every N ms)
@@ -44,9 +44,9 @@ video in pixels
 Additional options will be added over time to allow for the full set of raspistill and raspivideo command options to be available. I've also included another option, `lifetime`, that will delete the output after N milliseconds. This can be used for a Raspberry Pi that is used as a collector sending files to a server so that the memory doesn't fill up over time, for instance.
 
 
-###RaspiCam Object Methods
+### RaspiCam Object Methods
 
-####RaspiCam.start({ opts })
+#### RaspiCam.start({ opts })
 
 Depending on the `mode`, this will take a snapshot ("photo"), start a timelapse ("timelapse") or start a video recording ("video"). The function returns a process id so the stop method can be later called if necessary. The calling process then needs to set up a listener for a `"read"` event that the RaspiCam process will emit when the snapshot or video is complete, and each time a timelapse photo is taken, with any error message followed by the filename of the output as the payload, illustrated here:
 	
