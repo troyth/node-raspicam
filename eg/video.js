@@ -4,7 +4,7 @@ var RaspiCam = require("../lib/raspicam");
 var camera = new RaspiCam({
 	mode: "video",
 	output: "./video/video.h264",
-	encoding: "h264",
+	framerate: 15,
 	timeout: 5000 // take a 5 second video
 });
 
