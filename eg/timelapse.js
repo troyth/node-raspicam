@@ -22,3 +22,12 @@ camera.on("read", function( err, filename ){
 camera.on("exited", function(){
 	console.log("timelapse child process has exited");
 });
+
+camera.on("stopped", function(){
+	console.log("timelapse child process has been stopped");
+});
+
+// test stop() method before the full 12 seconds is up
+setTimeout(function(){
+	camera.stop();
+}, 10000);
