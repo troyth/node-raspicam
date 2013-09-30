@@ -8,8 +8,6 @@ var camera = new RaspiCam({
 	timeout: 0 // take the picture immediately
 });
 
-camera.start();
-
 camera.on("started", function(){
 	console.log("photo started");
 });
@@ -21,3 +19,5 @@ camera.on("read", function( err, filename ){
 camera.on("exited", function(){
 	console.log("photo child process has exited");
 });
+
+camera.start();

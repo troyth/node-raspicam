@@ -9,8 +9,6 @@ var camera = new RaspiCam({
 	timeout: 12000 // take a total of 4 pictures over 12 seconds
 });
 
-camera.start();
-
 camera.on("started", function(){
 	console.log("timelapse started");
 });
@@ -26,6 +24,8 @@ camera.on("exited", function(){
 camera.on("stopped", function(){
 	console.log("timelapse child process has been stopped");
 });
+
+camera.start();
 
 // test stop() method before the full 12 seconds is up
 setTimeout(function(){
