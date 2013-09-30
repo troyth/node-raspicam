@@ -13,6 +13,6 @@ camera.on("start", function(){
 	console.log("photo started");
 });
 
-camera.on("read", function( filename ){
+camera.on("read", function( err, filename ){
 	console.log("photo image captured with filename: " + filename);
 });

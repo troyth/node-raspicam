@@ -14,6 +14,6 @@ camera.on("start", function(){
 	console.log("timelapse started");
 });
 
-camera.on("read", function( filename ){
+camera.on("read", function( err, filename ){
 	console.log("timelapse image captured with filename: " + filename);
 });
