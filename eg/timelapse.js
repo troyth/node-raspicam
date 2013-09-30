@@ -11,7 +11,7 @@ var camera = new RaspiCam({
 
 camera.start();
 
-camera.on("start", function(){
+camera.on("started", function(){
 	console.log("timelapse started");
 });
 

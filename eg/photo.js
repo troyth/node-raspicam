@@ -10,10 +10,14 @@ var camera = new RaspiCam({
 
 camera.start();
 
-camera.on("start", function(){
+camera.on("started", function(){
 	console.log("photo started");
 });
 
 camera.on("read", function( err, filename ){
 	console.log("photo image captured with filename: " + filename);
+});
+
+camera.on("exited", function(){
+	console.log("photo child process has exited");
 });
