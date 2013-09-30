@@ -113,11 +113,17 @@ Note: I've kept these in for completeness, but I'm not sure how they will be use
 
 #### RaspiCam.start( )
 
-Depending on the `mode`, this will either take a snapshot ("photo"), start a timelapse ("timelapse") or start a video recording ("video"). You can then set up a listener for a `"read"` event that the RaspiCam process will emit when the snapshot or video is complete, and each time a timelapse photo is taken.
+Depending on the `mode`, this will either take a snapshot ("photo"), start a timelapse ("timelapse") or start a video recording ("video").
 
 You can only call start() once on a RaspiCam object, as the same physical camera cannot do multiple captures at once.
 
 Returns `false` if any errors, otherwise returns `true`.
+
+Emits the following signals:
+
+*	`start` with payload (err, timestamp) when the capture process was started by a .start() method call
+*	`read` with payload (err, timestamp, filename) when a new file is saved (very useful for timelapses)
+*	`exit` with payload (timestamp) when the capture process exits via timeout
 
 
 #### RaspiCam.stop( )
@@ -126,6 +132,9 @@ This stops any ongoing camera process.
 
 Returns `true` if it stopped a process, otherwise returns `false`.
 
+Emits the following signals:
+
+*	`stop` with payload (err, timestamp) when the capture process was stopped by a .stop() method call
 
 
 #### RaspiCam.set( opt, value )

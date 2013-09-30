@@ -9,20 +9,20 @@ var camera = new RaspiCam({
 	timeout: 12000 // take a total of 4 pictures over 12 seconds
 });
 
-camera.on("started", function(){
-	console.log("timelapse started");
+camera.on("start", function( err, timestamp ){
+	console.log("timelapse started at " + timestamp);
 });
 
-camera.on("read", function( err, filename ){
+camera.on("read", function( err, timestamp, filename ){
 	console.log("timelapse image captured with filename: " + filename);
 });
 
-camera.on("exited", function(){
+camera.on("exit", function( timestamp ){
 	console.log("timelapse child process has exited");
 });
 
-camera.on("stopped", function(){
-	console.log("timelapse child process has been stopped");
+camera.on("stop", function( err, timestamp ){
+	console.log("timelapse child process has been stopped at " + timestamp);
 });
 
 camera.start();
