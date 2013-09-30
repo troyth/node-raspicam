@@ -3,7 +3,7 @@ var RaspiCam = require("../lib/raspicam");
 
 var camera = new RaspiCam({
 	mode: "photo",
-	output: "./photo/image.jpg", // image_000001.jpg, image_000002.jpg
+	output: "./photo/image.jpg",
 	encoding: "jpg",
 	timeout: 0 // take the picture immediately
 });
