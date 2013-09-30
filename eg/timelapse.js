@@ -17,3 +17,7 @@ camera.on("start", function(){
 camera.on("read", function( err, filename ){
 	console.log("timelapse image captured with filename: " + filename);
 });
+
+camera.on("exited", function(){
+	console.log("timelapse child process has exited");
+});
