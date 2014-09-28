@@ -28,7 +28,7 @@ Require raspicam in your node app, then used the exposed constructor to create a
 	});
 
 	//listen for the "read" event triggered when each new photo/video is saved
-	camera.on("read", function(err, filename){ 
+	camera.on("read", function(err, timestamp, filename){ 
 		//do stuff
 	});
 
