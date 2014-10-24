@@ -14,7 +14,7 @@ Require raspicam in your node app, then used the exposed constructor to create a
 
 	var RaspiCam = require("raspicam");
 
-	var camera = new RaspiCam({ opts });
+	var camera = new RaspiCam({ opts }, { libOpts });
 
 	//to take a snapshot, start a timelapse or video recording
 	camera.start( );
@@ -107,7 +107,7 @@ Note: I've kept these in for completeness, but I'm not sure how they will be use
 *	`hf`, `hflip` : Set horizontal flip
 *	`vf`, `vflip` : Set vertical flip
 
-###### RaspiCam Flags
+###### Lib Opts
 
 *	`silent` : Boolean - If true, no console.logs are printed
 
