@@ -14,7 +14,7 @@ Require raspicam in your node app, then used the exposed constructor to create a
 
 	var RaspiCam = require("raspicam");
 
-	var camera = new RaspiCam({ opts });
+	var camera = new RaspiCam({ opts }, { libOpts });
 
 	//to take a snapshot, start a timelapse or video recording
 	camera.start( );
@@ -23,12 +23,12 @@ Require raspicam in your node app, then used the exposed constructor to create a
 	camera.stop( );
 
 	//listen for the "started" event triggered when the start method has been successfully initiated
-	camera.on("started", function(){ 
+	camera.on("started", function(){
 		//do stuff
 	});
 
 	//listen for the "read" event triggered when each new photo/video is saved
-	camera.on("read", function(err, timestamp, filename){ 
+	camera.on("read", function(err, timestamp, filename){
 		//do stuff
 	});
 
@@ -107,7 +107,9 @@ Note: I've kept these in for completeness, but I'm not sure how they will be use
 *	`hf`, `hflip` : Set horizontal flip
 *	`vf`, `vflip` : Set vertical flip
 
+###### Lib Opts
 
+*	`silent` : Boolean - If true, no console.logs are printed
 
 ### RaspiCam Constructor Options for Video
 
@@ -209,6 +211,3 @@ This is a setter - it sets any option you give it. Opt must be a string (eg. "wi
 #### RaspiCam.get( opt )
 
 This is a getter - it returns any option you give it. Opt must be a string (eg. "width").
-
-
-
