@@ -22,8 +22,8 @@ Require raspicam in your node app, then used the exposed constructor to create a
 	//to stop a timelapse or video recording
 	camera.stop( );
 
-	//listen for the "started" event triggered when the start method has been successfully initiated
-	camera.on("started", function(){ 
+	//listen for the "start" event triggered when the start method has been successfully initiated
+	camera.on("start", function(){
 		//do stuff
 	});
 
@@ -32,8 +32,13 @@ Require raspicam in your node app, then used the exposed constructor to create a
 		//do stuff
 	});
 
+	//listen for the "stop" event triggered when the stop method was called
+	camera.on("stop", function(){
+		//do stuff
+	});
+
 	//listen for the process to exit when the timeout has been reached
-	camera.on("exited", function(){
+	camera.on("exit", function(){
 		//do stuff
 	});
 
