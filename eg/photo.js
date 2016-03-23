@@ -8,7 +8,7 @@ var camera = new RaspiCam({
 	timeout: 0 // take the picture immediately
 });
 
-camera.on("started", function( err, timestamp ){
+camera.on("start", function( err, timestamp ){
 	console.log("photo started at " + timestamp );
 });
 
