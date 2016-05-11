@@ -2,6 +2,8 @@
 
 A Node.js-based controller module for the Raspberry Pi camera.
 
+This was forked from https://github.com/troyth/node-raspicam and changes were made to work with the latest JS technologies (es6, react, webpack)
+
 _Note_: This should work well for photo and timelapse, video has yet to be tested but may work as well.
 
 ## To Install
