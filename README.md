@@ -57,6 +57,8 @@ The RaspiCam() constructor creates an object that can then be triggered to take 
 
 #### Optional
 
+*   `log` : Function - logger function, defaults to `console.log`
+
 ##### Image parameter commands
 
 ###### Parameters with Values
@@ -122,6 +124,8 @@ Note: I've kept these in for completeness, but I'm not sure how they will be use
 *	`output` : String - the path and filename where you want to store the video (to write to stdout, use '-')
 
 #### Optional
+
+*   `log` : Function - logger function, defaults to `console.log`
 
 ##### Image parameter commands
 
