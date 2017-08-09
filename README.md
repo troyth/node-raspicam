@@ -221,3 +221,15 @@ This is a getter - it returns any option you give it. Opt must be a string (eg. 
 
 
 
+## To develop
+
+Add your tests in `test/raspicam.js` and start your developments.
+
+To check syntax and start tests, run
+```
+node_modules/.bin/grunt
+```
+or (if grunt and grunt-cli are installed globally)
+```
+grunt
+```
