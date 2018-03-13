@@ -5,7 +5,7 @@
     "q": "quality",
     "o": "output",
     "t": "timeout",
-    "s": "segment",
+    "sg": "segment",
     "th": "thumb",
     "e": "encoding",
     "x": "exif",
