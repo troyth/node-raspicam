@@ -135,6 +135,7 @@ Note: I've kept these in for completeness, but I'm not sure how they will be use
 *	`h`, `height` : Integer or String - Set image height <size> (Default is 1080)
 *	`b`, `bitrate` : Integer or String - Set bitrate. Use bits per second (e.g. 10MBits/s would be 10000000)
 *	`t`, `timeout` : Integer or String - Time (in ms) to capture for. If not specified, set to 5s. Zero to disable
+*	`s`, `segment` : Integer or String - Time (in ms) for captured clips length, Add %d to filename for a sequence naming
 *	`fps`, `framerate` : Integer or String - Specify the frames per second to record
 *	`g`, `intra` : Integer or String - Specify the intra refresh period (key frame rate/GoP size)
 
