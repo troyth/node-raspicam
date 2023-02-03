@@ -1,4 +1,6 @@
-# node-raspicam
+# node-raspicam-zero
+
+Extension of node-raspicam, to support newer RPIs.
 
 A Node.js-based controller module for the Raspberry Pi camera.
 
