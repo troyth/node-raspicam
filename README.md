@@ -8,7 +8,7 @@ _Note_: This should work well for photo and timelapse, video has yet to be teste
 
 ## To Install
 
-	npm install raspicam
+	npm install raspicamzero
 
 ## To Use
 
